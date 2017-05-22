@@ -1,0 +1,6 @@
+{
+  "api": "https://api.github.com",
+  "site": "https://github.com",
+  "clientId": "fe86db992a7ef04499ab",
+  "gatekeeperUrl": "https://prose-5ten-gatekeeper.herokuapp.com/"
+}
