@@ -15,6 +15,7 @@ var forms = {
   Button: require('./meta/button'),
   Select: require('./meta/select'),
   Multiselect: require('./meta/multiselect'),
+  Cloudinary: require('./meta/cloudinary'),
 };
 
 
@@ -102,6 +103,11 @@ module.exports = Backbone.View.extend({
           break;
           case 'text':
             view = new forms.TextForm({
+              data: _.extend({}, data, {type: 'text'})
+            });
+          break;
+          case 'cloudinary':
+            view = new forms.Cloudinary({
               data: _.extend({}, data, {type: 'text'})
             });
           break;
