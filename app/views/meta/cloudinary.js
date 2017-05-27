@@ -39,7 +39,7 @@ module.exports = Backbone.View.extend({
       //TODO get file extension
       var cloud_name = this.$form.prev().data('cloud_name');
       var cid = this.$form.val();
-      $('#'+this.$form.attr('id')+'_preview').append('<img src="https://res.cloudinary.com/'+cloud_name+'/image/upload/c_limit,h_100,w_100/'+cid+'.jpg">');
+      $('#'+this.$form.attr('id')+'_preview').html('<img src="https://res.cloudinary.com/'+cloud_name+'/image/upload/c_limit,h_100,w_100/'+cid+'.jpg">');
     }
     return this.options.data.type === 'number' ?
       Number(this.$form.val()) : this.$form.val();

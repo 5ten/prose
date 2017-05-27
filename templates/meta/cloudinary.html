@@ -4,8 +4,7 @@
   <fieldset>
 	<input type='file' data-cloud_name='<%= meta.cloud_name %>' id='<%= meta.name %>_input' onChange='doUpload("<%= meta.name %>", "<%= meta.api_key %>", "<%= meta.cloud_name %>", "<%= meta.upload_preset %>")' />
     <input class='metafield cloudinary' type='hidden' name='<%= meta.name %>' id='<%= meta.name %>' value='<%= meta.value %>' data-type='<%= meta.type %>' placeholder='<%= meta.placeholder %>' />
-    <div id="<%= meta.name %>_preview" class="image-preview">
-    	<div class="loader-upload"></div>
-    </div>
+  	<div class="loader-upload"></div>
+    <div id="<%= meta.name %>_preview" class="image-preview"></div>
   </fieldset>
 </div>

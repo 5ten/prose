@@ -89,6 +89,7 @@
   <script src='dist/prose.js'></script>
   <script type="text/javascript">
     let doUpload = (id,api_key,cloud_name,upload_preset) => {
+        $('#'+id+'_preview').hide();
         $('.loader-upload').show();
         var files = document.getElementById(id+'_input').files;
         var formData = new FormData();
@@ -108,7 +109,7 @@
                     $('#'+id).trigger( "change" );
                     var previewImg = document.createElement('img');
                     previewImg.setAttribute('src', 'https://res.cloudinary.com/'+cloud_name+'/image/upload/c_limit,h_100,w_100/'+res.public_id+'.'+res.format);
-                    $('#'+id+'_preview').html(previewImg);
+                    $('#'+id+'_preview').html(previewImg).show();
                     $('.loader-upload').hide();
 
 
